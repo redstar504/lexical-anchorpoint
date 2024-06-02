@@ -6,11 +6,9 @@ Parts of this plugin are inspired by the AutoLink plugin, however AnchorPoint se
 behavior provided there, and puts a core focus on matching URLs reliably, through robust regex tests and increased
 flexibility.
 
-The AutoLink plugin appeared to have core issues that would need to be reworked from the ground up, so
-rather than working on having sweeping changes merged into that package, this repository gives us a centralized place to reimagine
-the auto linker from the ground up.
+Unfortunately, the existing AutoLink plugin has core issues that would require a lot of rework, so
+rather than merging substantial changes into that package, this repository provides a centralized place to start fresh and
+build a simple, yet effective link matching plugin.
 
-This plugin is in the early stages and does not yet FULLY implement all functionality provided by the original AutoLink
-plugin, but it addresses the glaring issues that have been identified repeatedly by the community.
-
-**Note: The initial implementation is a WIP and this plugin is coming soon.**
+This plugin is in the early stages and does not yet fully implement all functionality provided by the original AutoLink
+plugin, but it addresses the glaring issues that have been identified consistently by users of Lexical.
