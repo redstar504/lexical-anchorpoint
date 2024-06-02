@@ -136,19 +136,18 @@ function App() {
           <h2>Additional Information</h2>
           <p>Lexical's React package ships with a plugin called AutoLink. The goal of AutoLink is to provide a node
             transformer that transforms any link like text typed or pasted into the editor into an AutoLink node.</p>
-          <p>Many issues have been reported due to the AutoLink plugin’s inability to match simple URLs. A glaring
+
+          <p>Several issues have been reported due to the AutoLink plugin’s inability to match some simple URLs. A common
             example is when typing a URL with a subdomain, such as http://www.google.com in the editor, it does not
             include the `.com` portion as being part of the link.</p>
-          <p>
-            The author of this plugin originally set out to contribute a resolution to the issues identified with the
+
+          <p>The author of this plugin originally set out to contribute a resolution to the issues identified with the
             AutoLink plugin. After reviewing the variety of PRs that have been raised to solve the core issues, and
             their corresponding nuances, he determined that it would be easier to rewrite a simple implementation, since
-            the same functionality could be achieved with a lot less code, while meeting the use case of his project.
-          </p>
-          <p>
-            Perhaps in the future, if this plugin is able to exceed the standards of the original AutoLink plugin, in a
-            reliably tested fashion, it can be integrated into the core Lexical package.
-          </p>
+            the same functionality could be achieved with a lot less code, while meeting the use case of his project.</p>
+
+          <p>Perhaps in the future, if this plugin is able to exceed the standards of the original AutoLink plugin, in a
+            reliably tested fashion, it can be integrated into the core Lexical package.</p>
         </section>
 
         <section>
