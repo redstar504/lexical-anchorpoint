@@ -1,6 +1,5 @@
 {
   "name": "lexical-anchorpoint",
-  "private": true,
   "version": "0.0.1",
   "main": "lib/lexical-anchorpoint.umd.js",
   "module": "lib/lexical-anchorpoint.es.js",
