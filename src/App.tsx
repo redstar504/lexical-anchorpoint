@@ -67,8 +67,7 @@ function App() {
                   </div>
                 }
                 placeholder={
-                  <div id="editorPlaceholder">Type a URL or embed them in some text to see AnchorPoint in
-                    action&hellip;</div>
+                  <div id="editorPlaceholder">Type, paste, or embed URLs in some text...</div>
                 }
                 ErrorBoundary={LexicalErrorBoundary}
               />
@@ -76,21 +75,21 @@ function App() {
           </LexicalComposer>
           <p className="flex-center flex-col-gap">
             <FaGithub />
-            Found a bug? Please
-            <a href="https://github.com/redstar504/lexical-anchorpoint/issues/new">open an issue</a>
-            on Github.
+            <div>
+              Found a bug? Please <a href="https://github.com/redstar504/lexical-anchorpoint/issues/new">open an issue</a> on Github.
+            </div>
           </p>
         </section>
 
         <section>
           <h2>Typical Installation</h2>
           <p>Run the following command in your Lexical React project’s root:</p>
-          <SyntaxHighlighter language="bash" style={agate} customStyle={{padding: '1em 1.5em'}}>
+          <SyntaxHighlighter language="bash" style={agate} customStyle={{padding: '1em'}}>
             {`npm i lexical-anchorpoint`}
           </SyntaxHighlighter>
           <p>Create the matchers, which in this plugin are referred to as anchor points, that specify the URL
             patterns:</p>
-          <SyntaxHighlighter language="react" style={agate} customStyle={{padding: '1em 1.5em'}}>
+          <SyntaxHighlighter language="react" style={agate} customStyle={{padding: '1em'}}>
 {`const ANCHOR_POINTS = [
   createAnchorPoint(DEFAULT_URL_REGEX, text => {
   return text.startsWith('http') ? text : \`https://\${text}\`})
@@ -98,7 +97,7 @@ function App() {
           </SyntaxHighlighter>
 
           <p>Nest the plugin as a child of your Lexical Composer component:</p>
-          <SyntaxHighlighter language="react" style={agate} customStyle={{padding: '1em 1.5em'}}>
+          <SyntaxHighlighter language="react" style={agate} customStyle={{padding: '1em'}}>
             {`<AnchorPointPlugin points={ANCHOR_POINTS} />`}
           </SyntaxHighlighter>
         </section>
