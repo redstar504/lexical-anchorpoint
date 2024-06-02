@@ -86,7 +86,7 @@ function App() {
           <h2>Typical Installation</h2>
           <p>Run the following command in your Lexical React project’s root:</p>
           <SyntaxHighlighter language="bash" style={agate} customStyle={{padding: '1em 1.5em'}}>
-            {`npm i redstar504/lexical-anchorpoint`}
+            {`npm i lexical-anchorpoint`}
           </SyntaxHighlighter>
           <p>Create the matchers, which in this plugin are referred to as anchor points, that specify the URL
             patterns:</p>
