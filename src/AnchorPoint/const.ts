@@ -1,1 +1,1 @@
-export const DEFAULT_URL_REGEX = /((ftp|http|https):\/\/(.+:.+@)?|www\.)([\w-/]+\.(?!$|\s))+\w*(:\d+)?([?/#][\w-~+?=#%&:/]*)?/
+export const DEFAULT_URL_REGEX = /((ftp|http|https):\/\/(.+:.+@)?|www\.)([\w-/]+\.(?!$|\s))+\w*(:\d+)?([?/#][\w-~+?=#%&:/]*)?/i
