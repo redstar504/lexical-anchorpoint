@@ -11,14 +11,19 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+//    "noEmit": true,
     "jsx": "react-jsx",
 
     /* Linting */
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Emit */
+    "declaration": true,
+    "declarationDir": "./lib",
+    "emitDeclarationOnly": true
   },
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
