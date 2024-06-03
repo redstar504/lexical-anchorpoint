@@ -47,8 +47,8 @@ function App() {
 
           <p>Using rigorous regex testing, combined with a simple aggregate-matching node transformer, it easily
             identifies links within TextNodes and converts them to AutoLink nodes. It solves the major shortcoming of
-            the AutoLink plugin’s inability to match some obvious URLs. Portions of the plugin are inspired by the original
-            plugin, but at it’s core, it chooses a different approach.</p>
+            the AutoLink plugin’s inability to match some obvious URLs. The plugin is largely inspired by the original
+            plugin, but at it’s core, chooses a different approach.</p>
 
           <p>This project is experimental and likely has a variety of issues. It meets the use case of a simple
             Lexical implementation being developed by the author. You are encouraged to test this plugin thoroughly and
