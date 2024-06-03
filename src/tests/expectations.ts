@@ -130,4 +130,5 @@ export const regexExpectations = [
   { inputtedText: 'www.example.com', matchedUrl: 'www.example.com' },
   { inputtedText: 'www.example', matchedUrl: false },
   { inputtedText: 'example.com', matchedUrl: false },
+  { inputtedText: 'http://www.google.com....', matchedUrl: 'http://www.google.com'}
 ]

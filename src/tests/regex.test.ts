@@ -18,7 +18,7 @@ test('URL matching regex matches input text according to expectations ', () => {
       expect(match).not.toBe(null)
       expect(match![0]).toBe(expectation.matchedUrl === true ? expectation.inputtedText : expectation.matchedUrl)
     } catch (e) {
-      throw new Error(`Expectation failed on ${expectation.inputtedText}, matched: ${match?.[0] ?? null}`);
+      throw new Error(`Expectation failed on '${expectation.inputtedText}', matched: '${match?.[0] ?? null}'`);
     }
   })
 })
