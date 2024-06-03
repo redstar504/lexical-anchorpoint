@@ -6,6 +6,8 @@
  *
  * For negating a URL match, include a string containing an invalid URL, or just the invalid URL itself in the inputtedText
  * property, and pass `false` for the matchedUrl property.
+ *
+ * The runner is located in the `regex.test.ts` file in the same directory.
  */
 export const regexExpectations = [
   { inputtedText: 'http://foo.com', matchedUrl: true },
