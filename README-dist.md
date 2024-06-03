@@ -16,3 +16,13 @@ This plugin is in the early stages and does not yet fully implement all function
 plugin, but it addresses the glaring issues that have been identified consistently by users of Lexical.
 
 [Installation instructions](https://redstar504.github.io/lexical-anchorpoint/)
+
+## Tests
+
+The plugin depends on a versatile regex pattern to handle matching.  There is a large amount of variations of text
+for which URL matches are tested against.  To see these, check out the `src/tests/expectations.ts` file.  You are
+welcome to build upon these by adding additional expectations to that file, and running the corresponding `regex.test.ts`
+file.
+
+If you believe you found a common variation that is not accounted for, please raise an issue.  It is of course not possible
+to account for every single URL variation using regex, but this plugin aims to handle 95% of cases.
