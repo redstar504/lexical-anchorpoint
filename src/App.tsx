@@ -43,20 +43,22 @@ function App() {
           <h1><FaAnchor /> Lexical AnchorPoint</h1>
           <p>This plugin aims to provide a drop-in replacement for the Lexical AutoLink plugin included with the Lexical
             React package. This plugin passes the most critical e2e tests of the original AutoLink plugin in only ~100
-            lines of easy to comprehend code.</p>
+            lines of <a href="https://github.com/redstar504/lexical-anchorpoint/blob/main/src/AnchorPoint/AnchorPointPlugin.tsx">easily understandable code</a>.</p>
 
-          <p>By leveraging rigorous regex testing, combined with a simple aggregate-matching node transformer, it easily
+          <p>Using rigorous regex testing, combined with a simple aggregate-matching node transformer, it easily
             identifies links within TextNodes and converts them to AutoLink nodes. It solves the major shortcoming of
-            the AutoLink plugin’s inability to match some obvious URLs. Parts of the plugin are inspired by the original
+            the AutoLink plugin’s inability to match some obvious URLs. Portions of the plugin are inspired by the original
             plugin, but at it’s core, it chooses a different approach.</p>
 
-          <p><i>Note: This project is experimental and likely has a variety of issues. It meets the use case of a simple
+          <p>This project is experimental and likely has a variety of issues. It meets the use case of a simple
             Lexical implementation being developed by the author. You are encouraged to test this plugin thoroughly and
-            report any issues in the GitHub repository. See additional contributing notes below.</i></p>
+            report any issues in the GitHub repository. See additional contributing notes below.</p>
         </section>
 
         <section>
           <h2>Try it and see</h2>
+          <p>Note: The floating link plugin is not installed, nor is any click handling, so this demo does not
+            let you click on the links yet. 😆</p>
           <LexicalComposer initialConfig={initialConfig}>
             <div id="editorContainer">
               <AnchorPointPlugin points={ANCHOR_POINTS} />
@@ -76,7 +78,8 @@ function App() {
           <p className="flex-center flex-col-gap">
             <FaGithub />
             <div>
-              Found a bug? Please <a href="https://github.com/redstar504/lexical-anchorpoint/issues/new">open an issue</a> on Github.
+              Found a bug? Please <a href="https://github.com/redstar504/lexical-anchorpoint/issues/new">open an
+              issue</a> on Github.
             </div>
           </p>
         </section>
