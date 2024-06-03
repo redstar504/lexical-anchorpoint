@@ -1,3 +1,12 @@
+/**
+ * For matching a URL within text, include a string containing a URL as inputtedText, and the URL that should be matched
+ * in the matchedUrl property.
+ *
+ * For matching a URL literal, include only the URL in the inputtedText property, and `true` in the matchedUrl property.
+ *
+ * For negating a URL match, include a string containing an invalid URL, or just the invalid URL itself in the inputtedText
+ * property, and pass `false` for the matchedUrl property.
+ */
 export const regexExpectations = [
   { inputtedText: 'http://foo.com', matchedUrl: true },
   { inputtedText: 'Hey guys, check out this URL: http://foo.com', matchedUrl: 'http://foo.com' },
