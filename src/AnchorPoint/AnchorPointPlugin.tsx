@@ -48,7 +48,7 @@ function $handleAppendToAnchor(prevSibling: AutoLinkNode, textNode: TextNode, po
     return
   }
 
-  // append to the autolink node, and subtract from the text node for each additional match
+  // append to the autolink node, and shift chars from the text node for each aggregate match
   const numCharsToShift = rematch.length - prevText.length
   textNode.setTextContent(nodeText.substring(numCharsToShift))
   prevLinkTextNode.setTextContent(rematch.text)
