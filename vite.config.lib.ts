@@ -11,17 +11,18 @@ export default defineConfig({
       fileName: format => `lexical-anchorpoint.${format}.js`
     },
     rollupOptions: {
-      external: ['react', 'react-dom', 'lexical', '@lexical/link', '@lexical/react'],
+      external: ['react', 'react-dom', 'lexical', '@lexical/link', '@lexical/react/LexicalComposerContext'],
       output: {
         globals: {
           react: 'React',
           'react-dom': 'ReactDOM',
           lexical: 'Lexical',
-          '@lexical/link': 'LexicalLink',
-          '@lexical/react': 'LexicalReact'
+          '@lexical/link': 'LexicalLink'
         }
       }
     },
-    outDir: 'lib'
+    outDir: 'lib',
+    minify: false,
+    sourcemap: true
   }
 })
