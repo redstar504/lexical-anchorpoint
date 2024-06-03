@@ -45,7 +45,7 @@ function App() {
             React package. This plugin passes the most critical e2e tests of the original AutoLink plugin in only ~100
             lines of <a href="https://github.com/redstar504/lexical-anchorpoint/blob/main/src/AnchorPoint/AnchorPointPlugin.tsx">easily understandable code</a>.</p>
 
-          <p>Using rigorous regex testing, combined with a simple aggregate-matching node transformer, it easily
+          <p>Using rigorous <a href="https://github.com/redstar504/lexical-anchorpoint/blob/main/src/tests/expectations.ts">regex testing</a>, combined with a simple aggregate-matching node transformer, it easily
             identifies links within TextNodes and converts them to AutoLink nodes. It solves the major shortcoming of
             the AutoLink plugin’s inability to match some obvious URLs. The plugin is largely inspired by the original
             plugin, but at it’s core, chooses a different approach.</p>
