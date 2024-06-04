@@ -21,7 +21,7 @@ plugin, but it addresses the glaring issues that have been identified consistent
 ## Tests
 
 The plugin depends on a versatile regex pattern to handle matching.  There is a large amount of variations of text
-for which URL matches are tested against.  To see these, check out the `src/tests/expectations.ts` file.  You are
+for which URL matches are tested against.  To see these, check out the `tests/unit/expectations.ts` file.  You are
 welcome to build upon these by adding additional expectations to that file, and modifying the corresponding `regex.test.ts`
 file.
 
