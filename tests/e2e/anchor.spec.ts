@@ -177,3 +177,56 @@ test('pasting links separated by characters such as commas', async({page}) => {
   const actual = await prettifyHTML(html.replace(/\n/gm, ''))
   expect(actual).toEqual(expected)
 })
+
+test('pasting multiple URLs separated by spaces', async({page}) => {
+  await page.goto(`http://localhost:${E2E_PORT}/lexical-anchorpoint/`)
+  const editor = page.locator('div[contenteditable=true]').first()
+  await editor.focus()
+
+  await page.evaluate(async() => {
+    const editorElem = document.querySelector('div[contenteditable=true]')
+
+    const pasteEvent = new Event('paste', {
+      bubbles: true,
+      cancelable: true
+    })
+
+    Object.defineProperty(pasteEvent, 'clipboardData', {
+      value: {
+        files: [],
+        getData() {
+          return 'https://1.com/ https://2.com/ https://3.com/ https://4.com/'
+        },
+        types: ['text/plain']
+      }
+    })
+
+    editorElem.dispatchEvent(pasteEvent)
+  })
+
+  const html = await page.locator('div[contenteditable=true]').first().innerHTML()
+
+  const expectedHtml = `
+  <p>
+    <a href="https://1.com/" dir="ltr">
+      <span data-lexical-text="true">https://1.com/</span>
+    </a>
+    <span data-lexical-text="true"></span>
+    <a href="https://2.com/" dir="ltr">
+      <span data-lexical-text="true">https://2.com/</span>
+    </a>
+    <span data-lexical-text="true"></span>
+    <a href="https://3.com/" dir="ltr">
+      <span data-lexical-text="true">https://3.com/</span>
+    </a>
+    <span data-lexical-text="true"></span>
+    <a href="https://4.com/" dir="ltr">
+      <span data-lexical-text="true">https://4.com/</span>
+    </a>
+  </p>
+  `
+
+  const expected = await prettifyHTML(expectedHtml.replace(/\n/gm, ''))
+  const actual = await prettifyHTML(html.replace(/\n/gm, ''))
+  expect(actual).toEqual(expected)
+})
