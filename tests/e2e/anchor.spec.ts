@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { prettifyHTML } from '../utils'
+import { E2E_PORT, prettifyHTML } from '../utils'
 
 test('typing plain text in the editor', async ({page}) => {
-  await page.goto('http://localhost:4000/lexical-anchorpoint/')
+  await page.goto(`http://localhost:${E2E_PORT}/lexical-anchorpoint/`)
   const editor = page.locator('div[contenteditable=true]').first()
   await editor.focus()
   await page.keyboard.type('hello world')
@@ -19,7 +19,7 @@ test('typing plain text in the editor', async ({page}) => {
 })
 
 test('typing links into the editor', async ({page}) => {
-  await page.goto('http://localhost:4000/lexical-anchorpoint/')
+  await page.goto(`http://localhost:${E2E_PORT}/lexical-anchorpoint/`)
   const editor = page.locator('div[contenteditable=true]').first()
   await editor.focus()
   await page.keyboard.type(
@@ -48,4 +48,8 @@ test('typing links into the editor', async ({page}) => {
   const expected = await prettifyHTML(expectedHtml.replace(/\n/gm, ''))
   const actual = await prettifyHTML(html.replace(/\n/gm, ''))
   expect(actual).toEqual(expected)
+})
+
+test('appending to URL when text content is not URL content', async ({page}) => {
+
 })
