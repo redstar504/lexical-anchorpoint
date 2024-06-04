@@ -47,7 +47,7 @@ function App() {
               href="https://github.com/redstar504/lexical-anchorpoint/blob/main/src/AnchorPoint/AnchorPointPlugin.tsx">easily
               understandable code</a>.</p>
 
-          <p>Using <a href="https://github.com/redstar504/lexical-anchorpoint/blob/main/src/tests/expectations.ts">regex
+          <p>Using <a href="https://github.com/redstar504/lexical-anchorpoint/blob/main/tests/unit/expectations.ts">regex
             testing</a>,
             combined with a simple aggregate-matching node transformer, it provides a simple way to
             identify and convert URLs within a span of TextNodes into AutoLink nodes. It solves the shortcoming of

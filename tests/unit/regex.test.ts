@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import { regexExpectations } from './expectations'
-import { DEFAULT_URL_REGEX } from '../AnchorPoint'
+import { DEFAULT_URL_REGEX } from '../../src/AnchorPoint'
 
 test('URL matching regex matches input text according to expectations ', () => {
   regexExpectations.forEach(expectation => {
