@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { prettifyHTML } from '../utils'
 
 test('typing plain text in the editor', async ({page}) => {
-  await page.goto('http://localhost:5172')
+  await page.goto('http://localhost:4000/lexical-anchorpoint/')
   const editor = page.locator('div[contenteditable=true]').first()
   await editor.focus()
   await page.keyboard.type('hello world')
@@ -19,7 +19,7 @@ test('typing plain text in the editor', async ({page}) => {
 })
 
 test('typing links into the editor', async ({page}) => {
-  await page.goto('http://localhost:5172')
+  await page.goto('http://localhost:4000/lexical-anchorpoint/')
   const editor = page.locator('div[contenteditable=true]').first()
   await editor.focus()
   await page.keyboard.type(
