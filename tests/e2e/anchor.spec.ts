@@ -76,3 +76,55 @@ test('appending to URL when text content is not URL content', async ({page}) => 
   const actual = await prettifyHTML(html.replace(/\n/gm, ''))
   expect(actual).toEqual(expected)
 })
+
+test('creates links when pasting text with URLs', async({page}) => {
+  await page.goto(`http://localhost:${E2E_PORT}/lexical-anchorpoint/`)
+  const editor = page.locator('div[contenteditable=true]').first()
+  await editor.focus()
+
+  await page.evaluate(async() => {
+    const editorElem = document.querySelector('div[contenteditable=true]')
+
+    const pasteEvent = new Event('paste', {
+      bubbles: true,
+      cancelable: true
+    })
+
+    Object.defineProperty(pasteEvent, 'clipboardData', {
+      value: {
+        files: [],
+        getData(type, value) {
+          return 'Hello http://example.com and https://example.com/path?with=query#and-hash and www.example.com'
+        },
+        types: ['text/plain']
+      }
+    })
+
+    editorElem.dispatchEvent(pasteEvent)
+  })
+
+  const html = await page.locator('div[contenteditable=true]').first().innerHTML()
+
+  const expectedHtml = `
+  <p dir="ltr">
+    <span data-lexical-text="true">Hello</span>
+    <a href="http://example.com" dir="ltr">
+      <span data-lexical-text="true">http://example.com</span>
+    </a>
+    <span data-lexical-text="true">and</span>
+    <a href="https://example.com/path?with=query#and-hash" dir="ltr">
+      <span data-lexical-text="true">
+        https://example.com/path?with=query#and-hash
+      </span>
+    </a>
+    <span data-lexical-text="true">and</span>
+    <a href="https://www.example.com" dir="ltr">
+      <span data-lexical-text="true">www.example.com</span>
+    </a>
+  </p>
+  `
+
+  const expected = await prettifyHTML(expectedHtml.replace(/\n/gm, ''))
+  const actual = await prettifyHTML(html.replace(/\n/gm, ''))
+  expect(actual).toEqual(expected)
+})
