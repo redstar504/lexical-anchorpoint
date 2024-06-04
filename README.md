@@ -16,6 +16,7 @@ This plugin is in the early stages and does not yet fully implement all function
 plugin, but it addresses the glaring issues that have been identified consistently by users of Lexical.
 
 [Installation instructions](https://redstar504.github.io/lexical-anchorpoint/)
+| [Lexical Framework](https://github.com/facebook/lexical/)
 
 ## Tests
 
