@@ -120,8 +120,7 @@ const ANCHOR_POINTS = [
             the most commonly reported issues.</p>
 
           <p>There were some tests that were deemed unimportant for the purposes of an early release of this
-            implementation, and therefore were not included in this project’s e2e tests (in fact none have been
-            implemented in this repo yet, it was developed against the playground tests and copied over):</p>
+            implementation, and therefore were not included in this project’s e2e tests:</p>
           <ul>
             <li>
               <IoIosArrowDroprightCircle />
@@ -168,12 +167,9 @@ const ANCHOR_POINTS = [
           <p>This project is in early infancy. It only meets the use case for a project being developed by the
             author.</p>
           <p>As such, there are likely many edge cases, and bugs that have not been identified. You are encouraged to
-            raise
-            an issue or a PR, to report any problems, or to provide any missing functionality.</p>
+            raise an issue or a PR, to report any problems, or to provide any missing functionality.</p>
 
-          {/*<p>Any fixes or feature additions must be backed by tests, no exceptions.  There are currently no e2e tests
-          included in this repo since it was developed directly against the playground tests, but the critical ones are in the process
-          of being ported over.</p>*/}
+          <p>Any fixes or feature additions must be backed by e2e tests or unit tests where applicable.</p>
 
           <a href="https://github.com/redstar504/lexical-anchorpoint" target="_blank" id="contribLink">
             <FaGithub />
