@@ -99,7 +99,9 @@ function App() {
           <p>Create the matchers, which in this plugin are referred to as anchor points, that specify the URL
             patterns:</p>
           <SyntaxHighlighter language="react" style={agate} customStyle={{ padding: '1em' }}>
-            {`const ANCHOR_POINTS = [
+            {`import { AnchorPointPlugin, createAnchorPoint, DEFAULT_URL_REGEX } from 'lexical-anchorpoint'
+
+const ANCHOR_POINTS = [
   createAnchorPoint(DEFAULT_URL_REGEX, text => {
   return text.startsWith('http') ? text : \`https://\${text}\`})
 ]`}
