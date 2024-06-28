@@ -64,7 +64,7 @@ function App() {
         <section>
           <h2>Try it and see</h2>
           <p>Note: The floating link plugin is not installed, nor is any click handling, so this demo will not
-            let you click on the links yet. 😆</p>
+            currently let you click on the links.</p>
           <LexicalComposer initialConfig={initialConfig}>
             <div id="editorContainer">
               <AnchorPointPlugin points={ANCHOR_POINTS} />
